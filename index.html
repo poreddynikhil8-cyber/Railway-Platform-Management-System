@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Platform Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🚆 Railway Platform Management System</h1>
+    <p>Manage trains and assign available platforms efficiently.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Add Train</h2>
+      <form id="trainForm">
+        <label for="trainName">Train Name</label>
+        <input id="trainName" type="text" placeholder="Enter train name" required>
+
+        <label for="trainNumber">Train Number</label>
+        <input id="trainNumber" type="text" placeholder="Enter train number" required>
+
+        <label for="arrival">Arrival Time</label>
+        <input id="arrival" type="time" required>
+
+        <label for="departure">Departure Time</label>
+        <input id="departure" type="time" required>
+
+        <button type="submit">Assign Platform</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Platform Status</h2>
+      <div id="platforms" class="platforms"></div>
+    </section>
+
+    <section class="card">
+      <h2>Train Schedule</h2>
+      <p id="message" role="status">Add a train to get started.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Train No.</th>
+              <th>Train Name</th>
+              <th>Arrival</th>
+              <th>Departure</th>
+              <th>Platform</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="trainList"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
